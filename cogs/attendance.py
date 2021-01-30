@@ -9,7 +9,7 @@ class Attendance(commands.Cog):
     This cog implements some rudimentary features for automatically implementing
     reminders and tracking a week's attendance.
 
-    TODO: Eventually, task historical attendance.
+    TODO: Eventually, take historical attendance.
     TODO: Re-implement this to use CRON syntax.
     """
 
@@ -116,7 +116,7 @@ class Attendance(commands.Cog):
 
         await ctx.send(
             (
-                "Roll Call! Here is what I know: \n"
+                "Roll Call! Here is what I know: \n\n"
                 f"Confirmed attendance: {roster if roster else 'None.'}\n"
                 f"Confirmed not in attendance: {skipping if skipping else 'None.'}\n"
                 f"Unaccounted for: {unaccounted_for if unaccounted_for else 'None. Thanks everyone!'}"

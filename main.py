@@ -6,12 +6,12 @@ import sys
 
 from discord import Client
 from discord.ext import commands
-from cogs import Attendance
+from cogs import Attendance, Rollers
 
 # A cog is discord's lingo for a collection of commands and tasks.
 # They must inherit from the Cogs class. Add them here to be loaded.
-COGS = (Attendance,)
-bot = commands.Bot(command_prefix="!")
+COGS = (Attendance, Rollers)
+bot = commands.Bot(command_prefix="/")
 
 
 def setup_logger(level: int) -> logging.Logger:
